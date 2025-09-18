@@ -18,7 +18,9 @@
     <div class="container text-center">
       <div class="row">
         <div class="col">
-          <form class="card" style="height: 50vh;">
+
+          <!-- fungsi luas persegi panjang yang ada di javascript diletakkan di form onSubmit -->
+          <form onsubmit="HitungPersegiPanjang()" class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Persegi Panjang</h5>
 
@@ -44,10 +46,9 @@
                 />
               </div>
 
-              <!-- fungsi luas persegi panjang yang ada di javascript diletakkan disini -->
+              <!-- button menggunakan type submit -->
               <button
-                type="button"
-                onclick="HitungPersegiPanjang()" 
+                type="submit"
                 class="btn btn-primary mb-3"
               >
                 Hitung Luas
@@ -58,7 +59,8 @@
           </form>
         </div>
         <div class="col">
-          <form class="card" style="height: 50vh;">
+          <!-- fungsi luas bujur sangkar yang ada di javascript diletakkan di form onSubmit -->
+          <form onsubmit="HitungBujurSangkar()" class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Bujur Sangkar</h5>
 
@@ -73,10 +75,9 @@
                 />
               </div>
 
-              <!-- fungsi luas bujur sangkar yang ada di javascript diletakkan disini -->
+              <!-- button menggunakan type submit -->
               <button
-                type="button"
-                onclick="HitungBujurSangkar()"
+                type="submit"
                 class="btn btn-primary mb-3"
               >
                 Hitung Luas
@@ -87,7 +88,9 @@
           </form>
         </div>
         <div class="col">
-          <form class="card" style="height: 50vh;">
+
+          <!-- fungsi luas segitiga yang ada di javascript diletakkan di form onSubmit -->
+          <form onsubmit="HitungSegitiga()" class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Segitiga</h5>
 
@@ -113,10 +116,9 @@
                 />
               </div>
 
-              <!-- fungsi luas segitiga yang ada di javascript diletakkan disini -->
+              <!-- button menggunakan type submit -->
               <button
-                type="button"
-                onclick="HitungSegitiga()"
+                type="submit"
                 class="btn btn-primary mb-3"
               >
                 Hitung Luas
@@ -136,6 +138,7 @@
         let hasil;
         hasil = panjang * lebar; //gunakan rumus luas persegi panjang untuk mendapatkan hasil
         document.getElementById("hasil1").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil1
+        event.preventDefault(); //mencegah event bawaan dari DOM
       }
       function HitungBujurSangkar() {
         let sisi = document.getElementById("sisi").value; //variabel sisi diambil dari input user di html dengan id #sisi
@@ -143,6 +146,7 @@
         let hasil;
         hasil = sisi*sisi; //gunakan rumus luas bujur sangkar untuk mendapatkan hasil
         hasil = document.getElementById("hasil2").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil2
+        event.preventDefault(); //mencegah event bawaan dari DOM
       }
       function HitungSegitiga() {
         let alas = document.getElementById("alas").value; //variabel alas diambil dari input user di html dengan id #alas
@@ -151,6 +155,7 @@
         let hasil;
         hasil = (alas*tinggi)/2; //gunakan rumus luas segitiga untuk mendapatkan hasil
         hasil = document.getElementById("hasil3").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil3
+        event.preventDefault(); //mencegah event bawaan dari DOM
       }
     </script>
   </body>
