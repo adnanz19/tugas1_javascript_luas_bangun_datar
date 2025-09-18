@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas 1 JS Bima Adnandita</title>
+
+    <!-- link untuk integrasi ke bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,6 +21,8 @@
           <form class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Persegi Panjang</h5>
+
+              <!-- nilai panjang dari input user -->
               <div class="input-group mb-3">
                 <span class="input-group-text">Panjang</span>
                 <input
@@ -28,6 +32,8 @@
                   class="form-control"
                 />
               </div>
+
+              <!-- nilai lebar dari input user -->
               <div class="input-group mb-3">
                 <span class="input-group-text">Lebar</span>
                 <input
@@ -37,9 +43,11 @@
                   class="form-control"
                 />
               </div>
+
+              <!-- fungsi luas persegi panjang yang ada di javascript diletakkan disini -->
               <button
                 type="button"
-                onclick="HitungPersegiPanjang()"
+                onclick="HitungPersegiPanjang()" 
                 class="btn btn-primary mb-3"
               >
                 Hitung Luas
@@ -53,6 +61,8 @@
           <form class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Bujur Sangkar</h5>
+
+              <!-- nilai sisi dari input user -->
               <div class="input-group mb-3">
                 <span class="input-group-text">Sisi</span>
                 <input
@@ -62,6 +72,8 @@
                   class="form-control"
                 />
               </div>
+
+              <!-- fungsi luas bujur sangkar yang ada di javascript diletakkan disini -->
               <button
                 type="button"
                 onclick="HitungBujurSangkar()"
@@ -78,6 +90,8 @@
           <form class="card" style="height: 50vh;">
             <div class="card-body">
               <h5 class="card-title mb-3">Luas Segitiga</h5>
+
+              <!-- nilai alas dari input user -->
               <div class="input-group mb-3">
                 <span class="input-group-text">Alas</span>
                 <input
@@ -87,6 +101,8 @@
                   class="form-control"
                 />
               </div>
+
+              <!-- nilai tinggi dari input user -->
               <div class="input-group mb-3">
                 <span class="input-group-text">Tinggi</span>
                 <input
@@ -96,6 +112,8 @@
                   class="form-control"
                 />
               </div>
+
+              <!-- fungsi luas segitiga yang ada di javascript diletakkan disini -->
               <button
                 type="button"
                 onclick="HitungSegitiga()"
@@ -112,27 +130,27 @@
     </div>
     <script>
       function HitungPersegiPanjang() {
-        let panjang = document.getElementById("panjang").value;
-        let lebar = document.getElementById("lebar").value;
+        let panjang = document.getElementById("panjang").value; //variabel panjang diambil dari input user di html dengan id #panjang
+        let lebar = document.getElementById("lebar").value; //variabel lebar diambil dari input user di html dengan id #lebar
 
         let hasil;
-        hasil = panjang * lebar;
-        document.getElementById("hasil1").innerHTML = hasil;
+        hasil = panjang * lebar; //gunakan rumus luas persegi panjang untuk mendapatkan hasil
+        document.getElementById("hasil1").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil1
       }
       function HitungBujurSangkar() {
-        let sisi = document.getElementById("sisi").value;
+        let sisi = document.getElementById("sisi").value; //variabel sisi diambil dari input user di html dengan id #sisi
 
         let hasil;
-        hasil = sisi*sisi;
-        hasil = document.getElementById("hasil2").innerHTML = hasil;
+        hasil = sisi*sisi; //gunakan rumus luas bujur sangkar untuk mendapatkan hasil
+        hasil = document.getElementById("hasil2").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil2
       }
       function HitungSegitiga() {
-        let alas = document.getElementById("alas").value;
-        let tinggi = document.getElementById("tinggi").value;
+        let alas = document.getElementById("alas").value; //variabel alas diambil dari input user di html dengan id #alas
+        let tinggi = document.getElementById("tinggi").value; //variabel tinggi diambil dari input user di html dengan id #tinggi
 
         let hasil;
-        hasil = (alas*tinggi)/2;
-        hasil = document.getElementById("hasil3").innerHTML = hasil;
+        hasil = (alas*tinggi)/2; //gunakan rumus luas segitiga untuk mendapatkan hasil
+        hasil = document.getElementById("hasil3").innerHTML = hasil; //hasil dimasukkan ke halaman web dengan mengganti nilai "-" di id #hasil3
       }
     </script>
   </body>
